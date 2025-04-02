@@ -24,11 +24,45 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+
+		<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Apr 26, 2025 00:00:00").getTime();
+
+		// Update the count down every 30 minutes
+		var x = setInterval(function() {
+
+  		// Get today's date and time
+  		var now = new Date().getTime();
+
+  		// Find the distance between now and the count down date
+  		var distance = countDownDate - now;
+
+  		// Time calculations for days
+  		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  		// Display the result in the element with id="demo"
+  		document.getElementById("countdown").innerHTML = "Only " + days + " days to go";
+
+  		// If the count down is finished, write some text
+  		if (distance < 0) {
+    		clearInterval(x);
+    		document.getElementById("demo").innerHTML = "PHEW!";
+  		}
+	}, 1000);
+</script>
+
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
+
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2 id="countdown"></h2>
+						</div>
+					</section>
 
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
@@ -58,6 +92,15 @@
 									images/balanced/balanced-x4.jpg 1164w"
  									src="images/balanced/balanced.jpg" alt="Chris and Sian balanced on a wooden beam">
  							</picture>
+						</div>
+					</section>
+
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+						<h2> When?</h2>
+						<p>If you are joining us for the ceremony at 13:00, please arrive from Twelve Noon.</p>
+						<p>If you are coming to join us in the evening, please arrive from 18:30</p>
+						<p>Regardless, everyone needs to leave at Twelve midnight. Please remember the house is quite remote and you will need to book a taxi in advance.</p>
 						</div>
 					</section>
 
